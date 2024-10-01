@@ -1,0 +1,59 @@
+﻿<!-- Contact Section -->
+<div class="container p-lg-5 py-5 bg-light">
+        <h2 class="section-title text-center pb-3 underline">Kontaktní informace</h2>
+        <p>
+           Chcete si o mě udělat komplexní obrázek? Pojďme si domluvit osobní schůzku. Využijte některou ze zmíněných komunikačních platforem nebo kontaktní formulář.
+        </p>
+        <div class="row">
+        <div class="col-lg-6 text-center px-lg-5">
+                <h3>Moje „vizitka“</h3>
+                <div class="card p-5">
+                            <ul class="list-unstyled class">
+                                <li>E-mail: brasik20@seznam.cz</li>
+                                <li>Telefonní číslo: +420 606 283 358</li>
+                                <li>Bydliště: Plzeň, Západní Čechy</li>
+                                <li>Webové stránky: <a class="link-custom-two" href="https://www.davidbrach.cz/">davidbrach.cz</a></li>
+                            </ul>
+                            <p>
+                                <a href="https://www.facebook.com/david.brach.3/"><img src="images/icons/facebook.png" alt="Facebook" class="skill-icon"></a>
+                                <a href="https://cz.linkedin.com/in/david-b%C5%99ach-508441193"><img src="images/icons/linkedin.png" alt="LinkedIn" class="skill-icon"></a>
+                                <a href="https://wa.me/606283358"><img src="images/icons/whatsapp.png" alt="WhatsApp" class="skill-icon"></a>
+                                <a href="https://join.skype.com/invite/hj8rTFKsnnuc"><img src="images/icons/skype.png" alt="Skype" class="skill-icon"></a>
+                            </p>
+                </div>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 text-center px-lg-5">
+            @model ContactForm
+                <h3>Kontaktní formulář</h3>
+            @if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+                <div class="alert alert-info">@ViewBag.Message</div>
+            }
+
+            <form asp-action="Contact" method="post">
+                <div class="form-group">
+                    <label asp-for="Name">Jméno:</label>
+                    <input asp-for="Name" class="form-control" required />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">E-mail:</label>
+                    <input asp-for="Email" class="form-control" type="email" required />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Message">Zpráva:</label>
+                    <textarea asp-for="Message" class="form-control" rows="5" required></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Odeslat</button>
+            </form>
+
+            @section Scripts {
+                @{
+                    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                }
+            }
+            </div>
+        </div>
+</div>

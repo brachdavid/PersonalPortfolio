@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="David Břach" />
+    <meta name="keywords" content="David Břach, Junior Programátor, C#" />
+    <title>@ViewData["Title"] - David Břach - Osobní webové portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PersonalPortfolio.styles.css" asp-append-version="true" />
+    <link rel="shortcut icon" href="~/images/icons/icon.png" />
+</head>
+<body class="min-vh-100">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md navbar-toggleable-sm navbar-dark navbar-background border-bottom box-shadow mb-3">
+            <div class="container-fluid container-size">
+                <a class="navbar-brand col-lg-2 col-6 col-md-3" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" class="img-fluid w-100" alt="David Břach logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-md-inline-flex offset-lg-2">
+                    <ul class="navbar-nav flex-grow-1 justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/#about">O mě</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/#skills">Dovednosti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/#education">Vzdělání</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/#hobbies">Zájmy a koníčky</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="btn text-light btn-custom rounded-pill px-4" role="button" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                        </li>
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link text-light" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <article class="container-fluid container-size-article">
+    @RenderBody()
+    </article>
+
+
+    <footer class="border-top navbar-background text-white py-4 fixed-bottom position-absolute">
+        <div class="container text-center">
+            <p>&copy; 2024 <a class="link-custom" asp-controller="Home" asp-action="Index">David Břach - Personal portfolio.</a> Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

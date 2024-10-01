@@ -1,0 +1,108 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+.navbar-background {
+    background-color: #031821;
+}
+
+.btn-custom {
+    background-color: #F87300;
+}
+
+.btn-custom:hover {
+    filter: brightness(115%) contrast(85%);
+}
+
+@media (min-width: 1100px) {
+    .container-size {
+        max-width: 90%;
+    }
+}
+@media (min-width: 1100px) {
+    .container-size-article {
+        max-width: 90%;
+    }
+}
+
+.img-sizing {
+    object-fit: contain;
+}
+
+.skill-icon {
+    width: 2em;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.flip-card-front {
+    text-shadow: 1px 1px 2px black;
+}
+
+.flip-card-back {
+    background: url('../images/photos/network.jpg') no-repeat center center;
+    transform: rotateY(180deg);
+    text-shadow: 1px 1px 2px black;
+}
+.underline, nav ul a:hover {
+    text-decoration: underline;
+    text-decoration-color: #F87300;
+    text-underline-offset: 0.3em;
+}
+
+section[id] {
+    scroll-margin-top: 60px;
+}
+
+.link-custom {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.link-custom-two {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.link-custom:hover, .link-custom-two:hover {
+        color: #F87300
+}
