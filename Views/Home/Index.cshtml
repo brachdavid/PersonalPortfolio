@@ -1,4 +1,8 @@
-﻿<!-- Jumbotron Section -->
+﻿@{
+    ViewData["Title"] = "Vítejte | David Břach - Junior programátor"; // Nastavení názvu stránky
+}
+
+<!-- Jumbotron Section -->
 <section id="Jumbotron" class="bg-light p-lg-5 py-5">
     <div class="jumbotron text-center">
         <blockquote class="blockquote">
@@ -141,8 +145,8 @@
                         <div class="flip-card-back">
                             <div>
                                 <p>Osobní webové stránky začínajícího programátora.</p>
-                                <p>Součástí balení: C#, ASP.NET Core MVC, HTML5, CSS3, JavaScript</p>
-                                <a href="https://github.com/yourusername/project2" target="_blank" class="btn btn-light">GitHub</a>
+                                <p>Součástí balení: C#, ASP.NET Core MVC, HTML5, CSS3, JavaScript, Validace</p>
+                                <a href="https://github.com/brachdavid/PersonalPortfolio" target="_blank" class="btn btn-light">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -157,8 +161,8 @@
                         <div class="flip-card-back">
                             <div>
                                 <p>Konzolová aplikace sloužící jako evidence uchazečů o zaměstnání.</p>
-                                <p>Součástí balení: C#, OOP, MS-SQL, LINQ, Validace</p>
-                                <a href="https://github.com/yourusername/project3" target="_blank" class="btn btn-light">GitHub</a>
+                                <p>Součástí balení: C#, OOP, MS-SQL, LINQ, Validace, Entity Framework Core</p>
+                                <a href="https://github.com/brachdavid/Jobseekers" target="_blank" class="btn btn-light">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -167,13 +171,13 @@
             <div class="col-lg-4 col-md-6 portfolio-item">
                 <div class="flip-card m-2">
                     <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: url('../images/photos/food.jpg');">
-                            <h3 class="bg-secondary p-2 rounded" style="--bs-bg-opacity: .5;">Recipe website</h3>
+                        <div class="flip-card-front" style="background-image: url('../images/photos/checklist.jpg');">
+                            <h3 class="bg-secondary p-2 rounded" style="--bs-bg-opacity: .5;">Task Manager</h3>
                         </div>
                         <div class="flip-card-back">
                             <div>
-                                <p>PROJEKT VE VÝSTAVBĚ!</p>
-                                <p>Součástí balení: C#, ASP.NET Core MVC, HTML5, CSS3, JavaScript, Validace</p>
+                                <p>Webová aplikace pro správu úkolů a klientů v prostředí marketingové agentury.</p>
+                                <p>Součástí balení: Blazor, C#, EF Core, Identity, MS-SQL, LINQ, Validace</p>
                                 <a href="https://github.com/yourusername/project4" target="_blank" class="btn btn-light">GitHub</a>
                             </div>
                         </div>
@@ -274,7 +278,7 @@
                         <div class="carousel-caption">
                             <div class="bg-secondary p-2 rounded" style="--bs-bg-opacity: .8;">
                                 <h3>Filmy a seriály</h3>
-                                <p class="d-none d-md-block" ">
+                                <p class="d-none d-md-block">
                                     Filmové novinky, osvědčené klasiky, hororové příběhy, komiksové pecky,
                                     napínavé seriály nebo odpočinkové sitcomy? Když mám zrovna volnou chvilku,
                                     nebráním se žádnému kinematografickému počinu se zajímavou anotací!
